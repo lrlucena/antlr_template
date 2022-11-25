@@ -1,4 +1,4 @@
-// Generated from c:\Users\leona\git\GitHub\antlr_template\src\language\Language.g4 by ANTLR 4.8
+// Generated from java-escape by ANTLR 4.11.1
 package language.parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

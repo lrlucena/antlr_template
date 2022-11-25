@@ -1,12 +1,14 @@
 {
     "antlr4.call-graph.saveDir": ".",
     "antlr4.generation": {
+
+    
         "mode": "external",
         "language": "Java",
         "listeners": true,
         "visitors": false,
         "package": "language.parser",
         "outputDir": "parser",
-        "_alternativeJar": "/lib/antlr-4.9.1-complete.jar"
+        "alternativeJar": "/workspaces/antlr_template/lib/antlr-4.11.1-complete.jar"
     }
 }

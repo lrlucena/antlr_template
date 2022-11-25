@@ -10,7 +10,7 @@ public class ParseTreeProperty {
     }
 
     public <T> T get(ParseTree node) {
-        T value = (T) properties.get(node);
+        final T value = (T) properties.get(node);
         properties.removeFrom(node);
         return value;
     }

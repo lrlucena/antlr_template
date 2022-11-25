@@ -10,4 +10,4 @@ INT: ('0'..'9')+;
 
 Space: [ \t\n\r] -> skip; 
 
-//Comment: '#' .*? '\n' -> skip;
+Comment: '#' .*? '\n' -> skip;

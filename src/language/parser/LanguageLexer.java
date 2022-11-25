@@ -1,4 +1,4 @@
-// Generated from c:\Users\leona\git\GitHub\antlr_template\src\language\Language.g4 by ANTLR 4.8
+// Generated from java-escape by ANTLR 4.11.1
 package language.parser;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -9,15 +9,15 @@ import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class LanguageLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.11.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, INT=2, Space=3;
+		T__0=1, INT=2, Space=3, Comment=4;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -28,7 +28,7 @@ public class LanguageLexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"T__0", "INT", "Space"
+			"T__0", "INT", "Space", "Comment"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -41,7 +41,7 @@ public class LanguageLexer extends Lexer {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "INT", "Space"
+			null, null, "INT", "Space", "Comment"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -103,13 +103,29 @@ public class LanguageLexer extends Lexer {
 	public ATN getATN() { return _ATN; }
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2\5\24\b\1\4\2\t\2"+
-		"\4\3\t\3\4\4\t\4\3\2\3\2\3\3\6\3\r\n\3\r\3\16\3\16\3\4\3\4\3\4\3\4\2\2"+
-		"\5\3\3\5\4\7\5\3\2\3\5\2\13\f\17\17\"\"\2\24\2\3\3\2\2\2\2\5\3\2\2\2\2"+
-		"\7\3\2\2\2\3\t\3\2\2\2\5\f\3\2\2\2\7\20\3\2\2\2\t\n\7-\2\2\n\4\3\2\2\2"+
-		"\13\r\4\62;\2\f\13\3\2\2\2\r\16\3\2\2\2\16\f\3\2\2\2\16\17\3\2\2\2\17"+
-		"\6\3\2\2\2\20\21\t\2\2\2\21\22\3\2\2\2\22\23\b\4\2\2\23\b\3\2\2\2\4\2"+
-		"\16\3\b\2\2";
+		"\u0004\u0000\u0004\u001f\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002"+
+		"\u0001\u0007\u0001\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0001"+
+		"\u0000\u0001\u0000\u0001\u0001\u0004\u0001\r\b\u0001\u000b\u0001\f\u0001"+
+		"\u000e\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0003\u0001"+
+		"\u0003\u0005\u0003\u0017\b\u0003\n\u0003\f\u0003\u001a\t\u0003\u0001\u0003"+
+		"\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0018\u0000\u0004\u0001\u0001"+
+		"\u0003\u0002\u0005\u0003\u0007\u0004\u0001\u0000\u0001\u0003\u0000\t\n"+
+		"\r\r   \u0000\u0001\u0001\u0000\u0000\u0000\u0000\u0003\u0001\u0000\u0000"+
+		"\u0000\u0000\u0005\u0001\u0000\u0000\u0000\u0000\u0007\u0001\u0000\u0000"+
+		"\u0000\u0001\t\u0001\u0000\u0000\u0000\u0003\f\u0001\u0000\u0000\u0000"+
+		"\u0005\u0010\u0001\u0000\u0000\u0000\u0007\u0014\u0001\u0000\u0000\u0000"+
+		"\t\n\u0005+\u0000\u0000\n\u0002\u0001\u0000\u0000\u0000\u000b\r\u0002"+
+		"09\u0000\f\u000b\u0001\u0000\u0000\u0000\r\u000e\u0001\u0000\u0000\u0000"+
+		"\u000e\f\u0001\u0000\u0000\u0000\u000e\u000f\u0001\u0000\u0000\u0000\u000f"+
+		"\u0004\u0001\u0000\u0000\u0000\u0010\u0011\u0007\u0000\u0000\u0000\u0011"+
+		"\u0012\u0001\u0000\u0000\u0000\u0012\u0013\u0006\u0002\u0000\u0000\u0013"+
+		"\u0006\u0001\u0000\u0000\u0000\u0014\u0018\u0005#\u0000\u0000\u0015\u0017"+
+		"\t\u0000\u0000\u0000\u0016\u0015\u0001\u0000\u0000\u0000\u0017\u001a\u0001"+
+		"\u0000\u0000\u0000\u0018\u0019\u0001\u0000\u0000\u0000\u0018\u0016\u0001"+
+		"\u0000\u0000\u0000\u0019\u001b\u0001\u0000\u0000\u0000\u001a\u0018\u0001"+
+		"\u0000\u0000\u0000\u001b\u001c\u0005\n\u0000\u0000\u001c\u001d\u0001\u0000"+
+		"\u0000\u0000\u001d\u001e\u0006\u0003\u0000\u0000\u001e\b\u0001\u0000\u0000"+
+		"\u0000\u0003\u0000\u000e\u0018\u0001\u0006\u0000\u0000";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

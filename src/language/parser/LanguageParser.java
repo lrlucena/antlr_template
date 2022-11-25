@@ -1,4 +1,4 @@
-// Generated from c:\Users\leona\git\GitHub\antlr_template\src\language\Language.g4 by ANTLR 4.8
+// Generated from java-escape by ANTLR 4.11.1
 package language.parser;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -9,15 +9,15 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class LanguageParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.11.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, INT=2, Space=3;
+		T__0=1, INT=2, Space=3, Comment=4;
 	public static final int
 		RULE_program = 0, RULE_expression = 1;
 	private static String[] makeRuleNames() {
@@ -35,7 +35,7 @@ public class LanguageParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "INT", "Space"
+			null, null, "INT", "Space", "Comment"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -73,7 +73,7 @@ public class LanguageParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Language.g4"; }
+	public String getGrammarFileName() { return "java-escape"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -89,6 +89,7 @@ public class LanguageParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ProgramContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
@@ -131,6 +132,7 @@ public class LanguageParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ExpressionContext extends ParserRuleContext {
 		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -142,6 +144,7 @@ public class LanguageParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class SumContext extends ExpressionContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -159,6 +162,7 @@ public class LanguageParser extends Parser {
 			if ( listener instanceof LanguageListener ) ((LanguageListener)listener).exitSum(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class IntContext extends ExpressionContext {
 		public TerminalNode INT() { return getToken(LanguageParser.INT, 0); }
 		public IntContext(ExpressionContext ctx) { copyFrom(ctx); }
@@ -249,12 +253,19 @@ public class LanguageParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\5\25\4\2\t\2\4\3"+
-		"\t\3\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\7\3\20\n\3\f\3\16\3\23\13\3\3"+
-		"\3\2\3\4\4\2\4\2\2\2\23\2\6\3\2\2\2\4\t\3\2\2\2\6\7\5\4\3\2\7\b\7\2\2"+
-		"\3\b\3\3\2\2\2\t\n\b\3\1\2\n\13\7\4\2\2\13\21\3\2\2\2\f\r\f\3\2\2\r\16"+
-		"\7\3\2\2\16\20\5\4\3\4\17\f\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22"+
-		"\3\2\2\2\22\5\3\2\2\2\23\21\3\2\2\2\3\21";
+		"\u0004\u0001\u0004\u0013\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001"+
+		"\u0001\u0001\u0001\u0001\u0001\u0001\u0005\u0001\u000e\b\u0001\n\u0001"+
+		"\f\u0001\u0011\t\u0001\u0001\u0001\u0000\u0001\u0002\u0002\u0000\u0002"+
+		"\u0000\u0000\u0011\u0000\u0004\u0001\u0000\u0000\u0000\u0002\u0007\u0001"+
+		"\u0000\u0000\u0000\u0004\u0005\u0003\u0002\u0001\u0000\u0005\u0006\u0005"+
+		"\u0000\u0000\u0001\u0006\u0001\u0001\u0000\u0000\u0000\u0007\b\u0006\u0001"+
+		"\uffff\uffff\u0000\b\t\u0005\u0002\u0000\u0000\t\u000f\u0001\u0000\u0000"+
+		"\u0000\n\u000b\n\u0001\u0000\u0000\u000b\f\u0005\u0001\u0000\u0000\f\u000e"+
+		"\u0003\u0002\u0001\u0002\r\n\u0001\u0000\u0000\u0000\u000e\u0011\u0001"+
+		"\u0000\u0000\u0000\u000f\r\u0001\u0000\u0000\u0000\u000f\u0010\u0001\u0000"+
+		"\u0000\u0000\u0010\u0003\u0001\u0000\u0000\u0000\u0011\u000f\u0001\u0000"+
+		"\u0000\u0000\u0001\u000f";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
